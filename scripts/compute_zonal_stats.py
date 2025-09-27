@@ -1,13 +1,5 @@
 # scripts/compute_zonal_stats.py
-"""
-Calcula estadísticas zonales de Tmin por distrito.
 
-- Lee raster en data/raw/tmin_raster.tif (multibanda posible; Banda 1 = 2020)
-- Lee geojson preprocesado en data/processed/distritos_clean.geojson
-- Para cada banda (año) calcula: count, mean, min, max, std, p10, p90, pct_below_0C
-- Exporta por año: outputs/tables/zonalstats_<YEAR>.csv y .geojson
-- Exporta archivo maestro outputs/tables/zonalstats_all_years.csv
-"""
 import rioxarray as rxr
 import rasterio
 import rasterio.mask
