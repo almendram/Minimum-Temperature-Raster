@@ -1,13 +1,5 @@
 # scripts/prepare_vectors.py
-"""
-Prepara el shapefile de distritos:
-- Normaliza nombres (quita diacríticos, mayúsculas)
-- Genera/asegura columna UBIGEO (6 dígitos)
-- Repara geometrías (buffer(0) donde es necesario)
-- Fuerza CRS = EPSG:4326
-- Guarda GeoJSON limpio en data/processed/distritos_clean.geojson
-- Guarda un CSV de referencia con UBIGEO y NAME_CLEAN en data/processed/distritos_lookup.csv
-"""
+
 import geopandas as gpd
 from pathlib import Path
 import unicodedata
