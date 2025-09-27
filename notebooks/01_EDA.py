@@ -1,13 +1,5 @@
 # notebooks/01_EDA.py
-"""
-EDA automático — genera por cada archivo outputs/tables/zonalstats_<YEAR>.csv:
- - hist_mean_tmin_<YEAR>.png      (distribución)
- - top15_cold_<YEAR>.png         (top 15 distritos más fríos)
- - top15_hot_<YEAR>.png          (top 15 distritos más cálidos)
- - top15_cold_<YEAR>.csv         (CSV top15 fríos)
- - top15_hot_<YEAR>.csv          (CSV top15 cálidos)
- - choropleth_tmin_<YEAR>.png    (mapa coroplético si existe el geojson correspondiente)
-"""
+
 from pathlib import Path
 import pandas as pd
 import geopandas as gpd
