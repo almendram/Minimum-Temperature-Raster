@@ -1,0 +1,14 @@
+geopandas
+rasterio
+rioxarray
+rasterstats
+shapely
+pyproj
+pandas
+numpy
+matplotlib
+scipy
+streamlit
+unidecode
+gdown
+mapclassify
