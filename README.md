@@ -4,18 +4,25 @@ Aplicación para el análisis de la temperatura mínima (Tmin) del Perú a parti
 
 ---
 
-## 📂 Estructura del repositorio
+## Estructura del repositorio (rutas relativas)
 
-```
-Minimum-Temperature-Raster/
-│
-├── app/                # Aplicación Streamlit
-├── data/               # Datos: ráster, shapefiles/GeoJSON
-├── notebooks/          # Notebooks de análisis y EDA
-├── requirements.txt    # Dependencias
-├── README.md           # Este archivo
-└── app.py              # Script principal de la app
-```
+- `data/`
+  - `raw/tmin_raster.tif`  ← GeoTIFF Tmin (si es multibanda: banda 1 = 2020, etc.)
+  - `DISTRITOS.shp` (si lo tienes) ← shapefile original
+  - `processed/distritos_clean.geojson` ← generado por `scripts/prepare_vectors.py`
+
+- `scripts/`
+  - `prepare_vectors.py` ← limpieza y creación de `data/processed/distritos_clean.geojson`
+  - `compute_zonal_stats.py` ← calcula estadísticas zonales y genera `outputs/tables/`
+
+- `notebooks/`
+  - `01_EDA.py` ← genera PNGs y CSVs de análisis (distribución, rankings, coropletas)
+
+- `outputs/`
+  - `tables/` ← `zonalstats_<YEAR>.csv`, `zonalstats_<YEAR>.geojson`, `zonalstats_all_years.csv`
+  - `maps/` ← `hist_mean_tmin_<YEAR>.png`, `choropleth_tmin_<YEAR>.png`, `top15_*.png` y CSVs
+
+- `app/app.py` ← Streamlit app; desplegar en Streamlit Community Cloud (usar rutas relativas)
 
 ---
 
