@@ -12,3 +12,5 @@ streamlit
 unidecode
 gdown
 mapclassify
+tqdm
+pillow
